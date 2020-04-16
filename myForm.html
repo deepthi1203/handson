@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var y= document.forms["password"]["pwd"].value;
+  if(y ==""){
+	  alert("password should not be empty");
+	  return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  </form>
+<form name="password" action="#" onsubmit="return validateForm()" method="post">
+  Password: <input type="password" name="pwd">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
